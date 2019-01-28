@@ -23,6 +23,8 @@ bool FaceTracker::captureCamera(int cameraId, int width, int height)
 	stream->set(cv::CAP_PROP_FRAME_WIDTH, width);
 	stream->set(cv::CAP_PROP_FRAME_HEIGHT, height);
 
+	faceCascade = new cv::CascadeClassifier();
+
 	m_isOpen = stream->isOpened();
 	return m_isOpen;
 }
@@ -56,7 +58,7 @@ void FaceTracker::releaseCamera()
 
 bool FaceTracker::loadClassifierFile(const char *classifierFile)
 {
-	return faceCascade.load(classifierFile);
+	return faceCascade->load(classifierFile);
 }
 
 void FaceTracker::getFrame(cv::Mat& frame)
@@ -84,7 +86,7 @@ void FaceTracker::update(std::vector<uchar>& buffer)
 	cv::cvtColor(frame, frame_gray, CV_BGR2GRAY);
 	cv::equalizeHist(frame_gray, frame_gray);
 
-	faceCascade.detectMultiScale(frame_gray, faces, 1.1, 2, 0 | CV_HAAR_SCALE_IMAGE, cv::Size(60, 60));
+	faceCascade->detectMultiScale(frame_gray, faces, 1.1, 2, 0 | CV_HAAR_SCALE_IMAGE, cv::Size(60, 60));
 
 	for (size_t i = 0; i < faces.size(); i++)
 	{

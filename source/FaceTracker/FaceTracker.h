@@ -32,8 +32,6 @@ public:
 
 	void update(std::vector<uchar>& buffer);
 
-	static cv::Mat androidFrame;
-
 	void getFrame(cv::Mat& frame);
 
 private:
@@ -41,6 +39,6 @@ private:
 	cv::VideoCapture* stream;
 	bool m_isOpen;
 
-	cv::CascadeClassifier faceCascade;
+	cv::CascadeClassifier* faceCascade;
 };
 
