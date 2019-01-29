@@ -1,0 +1,30 @@
+﻿  stdafx.cpp
+  dllmain.cpp
+  FaceTracker.cpp
+f:\projects\project_repos\sdjack\ue4-face-tracker\source\facetracker\facetracker.cpp(94): warning C4244: 'argument': conversion from 'double' to '_Tp', possible loss of data
+          with
+          [
+              _Tp=int
+          ]
+f:\projects\project_repos\sdjack\ue4-face-tracker\source\facetracker\facetracker.cpp(93): warning C4244: 'argument': conversion from 'double' to '_Tp', possible loss of data
+          with
+          [
+              _Tp=int
+          ]
+f:\projects\project_repos\sdjack\ue4-face-tracker\source\facetracker\facetracker.cpp(101): warning C4244: 'argument': conversion from 'double' to '_Tp', possible loss of data
+          with
+          [
+              _Tp=int
+          ]
+f:\projects\project_repos\sdjack\ue4-face-tracker\source\facetracker\facetracker.cpp(100): warning C4244: 'argument': conversion from 'double' to '_Tp', possible loss of data
+          with
+          [
+              _Tp=int
+          ]
+     Creating library F:\PROJECTS\PROJECT_REPOS\sdjack\UE4-Face-Tracker\source\x64\Release\FaceTracker.lib and object F:\PROJECTS\PROJECT_REPOS\sdjack\UE4-Face-Tracker\source\x64\Release\FaceTracker.exp
+  Generating code
+  117 of 119 functions (98.3%) were compiled, the rest were copied from previous compilation.
+    0 functions were new in current compilation
+    0 functions had inline decision re-evaluated but remain unchanged
+  Finished generating code
+  FaceTracker.vcxproj -> F:\PROJECTS\PROJECT_REPOS\sdjack\UE4-Face-Tracker\source\x64\Release\FaceTracker.dll
